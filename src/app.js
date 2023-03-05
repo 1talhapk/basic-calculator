@@ -1,4 +1,3 @@
-console.log('first')
 class Calculator {
     constructor(prevCalculations, currentCalculations) {
         this.previousCalculations = prevCalculations;
@@ -35,7 +34,6 @@ class Calculator {
                     this.currentCalculations = '';
                     break;
                 default:
-                    console.log('nothing happened')
                     break;
             }
         }
