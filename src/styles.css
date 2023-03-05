@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Gotham, 'Times New Roman', Times, serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, #ffafbd  , #ffc3a0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    overflow: hidden;
+}
+.calculator-grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: 90px repeat(5, 65px);
+    /* grid-template-rows: minmax(90px, auto) repeat(5, 65px); */
+    outline: none;
+    border: none;
+
+}
+.calculator-grid button{
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 1.4rem;
+}
+.calculator-grid button:hover{
+    background-color: rgba(255, 255, 255, 0.85);
+}
+.calculator-grid :first-child{
+    grid-column: 1 / -1;
+}
+.calculator-grid .span-2{
+    grid-column: span 2;
+}
+.output{
+    color: white;
+    background-color: rgba(0, 0, 0 , 0.85);
+    display: grid;
+    justify-content: right;
+    text-align: right;
+    align-content: space-around;
+    padding: 7px;
+
+}
+.output :first-child{
+    font-size: 1.2rem;
+    color: white;
+    opacity: 0.78;
+}
+.output :last-child{
+    width: 100%;
+    font-size: 1.5rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+}
+
+@media screen and (max-width: 450px) {
+    .container{
+        align-items: normal;
+    }
+    .calculator-grid{
+        top: 2.9rem;
+        transition: 0.3s;
+    }
+}
+@font-face {
+  font-family: Gotham;
+  src: url(./fonts/GothamBook.ttf) format("truetype");
+}
