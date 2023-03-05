@@ -35,7 +35,6 @@ class Calculator {
                     this.currentCalculations = '';
                     break;
                 default:
-                    console.log('nothing happened')
                     break;
             }
         }
